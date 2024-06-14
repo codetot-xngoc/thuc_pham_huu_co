@@ -24,20 +24,11 @@ $ad = mysqli_fetch_array($lk->query("select*from admin where taikhoan = '".$_SES
         <li><a class="app-menu__item" href="?option=sanpham"><i
           class='app-menu__icon bx bx-purchase-tag-alt'></i><span class="app-menu__label">Quản lý sản phẩm</span></a>
         </li>
-        <li><a class="app-menu__item" href="table-data-oder.html"><i class='app-menu__icon bx bx-task'></i><span
+        <li><a class="app-menu__item" href="?option=tinhtrangdh"><i class='app-menu__icon bx bx-task'></i><span
           class="app-menu__label">Quản lý đơn hàng</span></a></li>
-          <li><a class="app-menu__item" href="table-data-banned.html"><i class='app-menu__icon bx bx-run'></i><span
-            class="app-menu__label">Quản lý nội bộ
-          </span></a></li>
-          <li><a class="app-menu__item" href="table-data-money.html"><i class='app-menu__icon bx bx-dollar'></i><span
-            class="app-menu__label">Bảng kê lương</span></a></li>
-            <li><a class="app-menu__item" href="quan-ly-bao-cao.html"><i
+            <li><a class="app-menu__item" href="?option=bcdt"><i
               class='app-menu__icon bx bx-pie-chart-alt-2'></i><span class="app-menu__label">Báo cáo doanh thu</span></a>
             </li>
-            <li><a class="app-menu__item" href="page-calendar.html"><i class='app-menu__icon bx bx-calendar-check'></i><span
-              class="app-menu__label">Lịch công tác </span></a></li>
-              <li><a class="app-menu__item" href="#"><i class='app-menu__icon bx bx-cog'></i><span class="app-menu__label">Cài
-              đặt hệ thống</span></a></li>
             </ul>
           </aside>
           <?php 
@@ -76,7 +67,31 @@ $ad = mysqli_fetch_array($lk->query("select*from admin where taikhoan = '".$_SES
 
               case 'sanpham':
               include "sanpham/thongtinsp.php";
-                break;
+              break;
+
+              case 'themsp':
+              include "sanpham/themsp.php";
+              break;
+
+              case 'suasp':
+              include "sanpham/suasp.php";
+              break;
+
+              case 'tinhtrangdh':
+              include "donhang/tinhtrangdh.php";
+              break;
+
+              case 'donhang':
+              include "donhang/thongtindh.php";
+              break;
+
+               case 'chitietdh':
+              include "donhang/chitietdh.php";
+              break;
+
+              case 'bcdt':
+              include "baocaodoanhthu/baocao.php";
+              break;
 
             }
 

@@ -1,6 +1,13 @@
 <?php 
 $query="select*from sanpham";
-$rq="sanpham";
+if(isset($_GET['rq'])){
+	if($_GET['rq']=='home'){
+	$rq="home";}else{
+	$rq="sanpham";
+}
+}else{
+	$rq="home";
+}
 $loaisp=$connect->query("select*from loaisp");
 
 if (isset($_GET['id'])) {
@@ -11,6 +18,10 @@ if (isset($_GET['option'])) {
 	header("location: ?rq=sanpham");
 }
 
+if(isset($_GET['timkiemsp'])){
+	$query="select*from sanpham where tensp like'%".$_GET['timkiemsp']."%'";
+}
+
 //phân trang
 $trang=1;
 if (isset($_GET['trang'])) {
@@ -19,8 +30,9 @@ if (isset($_GET['trang'])) {
 if (isset($_GET['rq'])) {
 	if ($_GET['rq']=="home") {
 		$sp1trang=12;
-	}else{$sp1trang=4;}
-}else{
+	}else{$sp1trang=8;}
+}
+else{
 		$sp1trang=12;
 	
 }
@@ -37,7 +49,7 @@ $result=$connect->query($query);
 
 <?php include"showsp.php"; ?>
 
-<div class="row mt-5">
+<div class="row mt-2 mb-3">
 	<div class="col text-center">
 		<div class="block-27">
 			<ul>

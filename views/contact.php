@@ -35,30 +35,13 @@
 	          </div>
           </div>
         </div>
-        <div class="row block-9">
-          <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-white p-5 contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Họ Và Tên">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Tin Nhắn"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Gửi" class="btn btn-primary py-3 px-5">
-              </div>
-            </form>
-          
-          </div>
+        
 
-          <div class="col-md-6 d-flex">
+          <div class="col-md-12 text-center">
           	
              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1316.4948252459214!2d105.55604863286888!3d21.048298409505183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1673421135796!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
             
-          </div>
+          
         </div>
       </div>
     </section>

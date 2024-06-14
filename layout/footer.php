@@ -24,20 +24,19 @@
               <h2 class="ftco-heading-2">Menu</h2>
               <ul class="list-unstyled">
                 <li><a href="?rq=sanpham" class="py-2 d-block">Sản Phẩm</a></li>
-                <li><a href="#" class="py-2 d-block">Giới Thiệu</a></li>
+                <li><a href="?rq=gt" class="py-2 d-block">Giới Thiệu</a></li>
                 <li><a href="?rq=contact" class="py-2 d-block">Liên Hệ</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md">
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Help</h2>
               <div class="d-flex">
 	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-	                <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
-	                <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
-	                <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
-	                <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
+	                <li><a href="?rq=signin" class="py-2 d-block">Đăng Nhập</a></li>
+	                <li><a href="?rq=register" class="py-2 d-block">Đăng Kí</a></li>
+	                
 	              </ul>
 	              
 	            </div>
@@ -60,7 +59,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						  Ahihi &copy;<script>document.write(new Date().getFullYear());</script> Không Biết Viết Gì |  <a href="https://www.facebook.com/profile.php?id=100022147272777" target="_blank">Nguyễn Xuân Ngọc</a> <i class="icon-heart color-danger" aria-hidden="true"></i>  
+						  Waybi &copy;<script>document.write(new Date().getFullYear());</script> Đồ Án Tốt Nghiệp |  <a href="https://www.facebook.com/profile.php?id=100022147272777" target="_blank">Nguyễn Xuân Ngọc</a> <i class="icon-heart color-danger" aria-hidden="true"></i>  
 						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						</p>
           </div>

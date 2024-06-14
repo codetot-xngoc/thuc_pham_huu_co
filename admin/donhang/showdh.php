@@ -8,9 +8,8 @@ $lay = ($trangdh-1)*$dh1trang;
 $tongdonhang = $lk->query("select*from donhang");
 $tongtrangdh = ceil(mysqli_num_rows($tongdonhang)/$dh1trang);
   $donhang = $lk->query("select*from donhang limit $lay,$dh1trang");
-
-
 ?>
+
 <div class="col-md-12">
   <div class="tile" style="margin-bottom: 10px;">
     <h3 class="tile-title">Tình trạng đơn hàng</h3>
@@ -35,16 +34,17 @@ $tongtrangdh = ceil(mysqli_num_rows($tongdonhang)/$dh1trang);
               </td>
 
               <td><?=$value['ngaymua']?></td>
-              <td class="text-center"><a href="#" class="badge bg-info">xem chi tiết</a></td>
+              <td class="text-center"><a href="?option=tinhtrangdh" class="badge bg-info">xem chi tiết</a></td>
             </tr>
           <?php } ?>
 
         </tbody>
       </table>
     </div>
-    <!-- / div trống-->
   </div>
 </div>
+
+
 <section class="trang container">
   <?php  if($trangdh>=3){
     $dau=1 ?>

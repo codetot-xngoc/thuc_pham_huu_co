@@ -1,26 +1,44 @@
     <?php 
- 
+        $query = "select*from khachhang";
+       if(isset($_GET["tk"])){
+        $tk = $_GET["tk"];
+        $query=("select*from khachhang where fullname like '%".$tk."%'"); 
+
+      }
       $trangkh=1;
       if (isset($_GET['trangkh'])) {
       $trangkh=$_GET['trangkh'];
       }
-      $kh1trang = 6;
+      $kh1trang = 5;
       $lay = ($trangkh-1)*$kh1trang;
-      $tkhachhang = mysqli_num_rows($lk->query("select*from khachhang"));
+      $tkhachhang = mysqli_num_rows($lk->query($query));
       $tongtrangkh = ceil($tkhachhang/$kh1trang);
-      $query=("select*from khachhang limit $lay,$kh1trang"); 
+      $query.=(" limit $lay,$kh1trang"); 
+
+     
 
       $khachhang = $lk->query($query);
+
+      if(mysqli_num_rows($khachhang)==0){
+        $alert = "Khách hàng không tồn tại!!!";
+      }
      ?>
      <div class="row">
     <div class="col-md-9 col-sm-9" style="margin-top: 50px;margin-left: 290px;">
           <div class="tile">
             <h3 class="tile-title">Quản Lý Khách hàng </h3>
             <div>
+              <div class="col-md-3">
+                <form  class="d-flex align-items-center">
+                  <input type="hidden" name="option" value="khachhang">
+                  <input type="text" name="tk" class="form-control form-control-sm">
+                  <input type="submit" value="Tìm Kiếm">
+                </form>
+              </div>
               <table class="table table-hover">
                 <thead>
                   <tr>
-                    <th>STT</th>
+                    
                     <th>Tên khách hàng</th>
                     <th>Số điện thoại</th>
                     <th>Địa Chỉ</th>
@@ -30,10 +48,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <?php $a=1;foreach ($khachhang as $value) { ?>
+                  <?php foreach ($khachhang as $value) { ?>
                     
                   <tr>
-                    <td><?=$a++?></td>
                     <td><?=$value['fullname']?></td>
                     <td><span class="tag tag-success"><?=$value['sdt']?></span></td>
                     <td><?=$value['diachi']?></td>
@@ -46,6 +63,9 @@
 
                 </tbody>
               </table>
+              <?php if(isset($alert)) : ?>
+              <section class="alert alert-danger "  style="text-align:center"><?=$alert?></section>
+            <?php endif; ?>
             </div>
 
 <section class="trang container">

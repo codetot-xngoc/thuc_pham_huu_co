@@ -28,13 +28,14 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     
-     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
-   
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> 
+    
     <link rel="stylesheet" type="text/css"
     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script> 
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> 
+    <script src="../public/ckeditor/ckeditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 </head>
@@ -55,12 +56,12 @@ session_start();
     ?>
     <?php
     if (isset($_SESSION['ad'])) {
-       include "quantri/trangchinh.php";
-   }else{
-      include "dnad.php";
-  }
+     include "quantri/trangchinh.php";
+ }else{
+  include "dnad.php";
+}
 
 
-  ?>
+?>
 </body>
 </html>

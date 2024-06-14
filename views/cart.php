@@ -76,7 +76,7 @@
    											<th>&nbsp;</th>
    											<th>&nbsp;</th>
    											<th>Tên Sản Phẩm</th>
-   											<th>Giá Bánn</th>
+   											<th>Giá Bán</th>
    											<th>Số Lượng</th>
    											<th>Tổng Phụ</th>
    										</tr>

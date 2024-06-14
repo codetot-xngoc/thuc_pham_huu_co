@@ -50,6 +50,10 @@ if (isset($_GET['rq'])) {
 		include("views/dathang.php");
 		break;
 
+		case 'paypal':
+		include("views/pay.php");
+		break;
+
 	}
 }else {
 	include"views/home.php";

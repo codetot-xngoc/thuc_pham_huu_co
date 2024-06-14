@@ -1,8 +1,28 @@
-
-
-
+<!-- <script type="text/javascript">
+$(document).ready(function(){
+    $('a[data-ajax="true"]').on('click', function(event){
+        event.preventDefault();
+        
+        var url = $(this).attr('href'); 
+        
+        $.ajax({
+            url: url,
+            type: 'GET', 
+            success: function(response){
+ 								var content = $(response).find('.spp').html(); 
+                $('.ftco-section').html(content); 
+                console.log(content);
+            },
+            error: function(xhr, status, error){
+                console.error(error);
+            }
+        });
+    });
+});
+</script> -->
 <section class="ftco-section">
-    	<div class="container">
+	<div class="spp">
+    	<div class="container ">
 				<div class="row justify-content-center mb-3 pb-3">
           <div class="col-md-12 heading-section text-center ftco-animate">
           	<span class="subheading">Sản Phẩm Tươi</span>
@@ -15,19 +35,32 @@
     		<?php if ($_GET['rq']=="sanpham") { ?>
     			
     		<div class="row justify-content-center">
-    			<div class="col-md-10 mb-5 text-center">
+    			
+    			<div class="col-md-10 mb-2 text-center">
     				<ul class="product-category">
-    					<li><a href="?rq=sanpham" class="border">Tất Cả</a></li>
+    					<li><a href="?rq=sanpham" class="border" >Tất Cả</a></li>
     					<?php foreach ($loaisp as $value): ?>
-    					<li><a href="?rq=sanpham&id=<?=$value['id']?>" class="border "><?php echo $value['tenloai'];; ?></a></li>
+    					<li><a href="?rq=sanpham&id=<?=$value['id']?> "
+    						data-ajax="true"
+    					 class="border"><?php echo $value['tenloai'];; ?></a></li>
     					<?php endforeach ?>
     					
     				</ul>
+    			</div>
+    			<div class="col-md-3 mb-5 text-center">
+    				<form class="d-flex align-items-center">
+    					<input type="hidden" name="rq" value="sanpham">
+    					<input style="height:35px!important" type="text" name="timkiemsp" class="form-control form-control-sm">
+    					<input type="submit" value="Tìm Kiếm" class="btn btn-light">
+    				</form>
     			</div>
     		</div>
     		<?php } ?>
     		<?php } ?>
     	<div class="container">
+    		<?php if(mysqli_num_rows($result)==0): ?>
+    		<div class="alert alert-danger text-center" role="alert">Sản Phẩm Không Tồn Tại!!!!</div>
+    		<?php endif; ?>
     		<div class="row">
     			<?php foreach ($result as $value) { ?>
     			<div class="col-md-6 col-lg-3 ftco-animate">
@@ -58,4 +91,5 @@
     			<?php } ?>
     		</div>
     	</div>
-    </section>
+    	</div>
+</section>

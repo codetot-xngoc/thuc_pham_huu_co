@@ -23,7 +23,10 @@
 	         
 
 
-	          <li class="nav-item cta cta-colored"><a href="?rq=cart" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+	          <li class="nav-item cta cta-colored"><a href="?rq=cart" class="nav-link"><span class="icon-shopping_cart"></span><?php if(isset($_SESSION['cart'])): ?>
+	          [<?=count($_SESSION['cart']);?>]
+	      		<?php endif;?> 
+	      		</a></li>
 
 	        </ul>
 	      </div>
